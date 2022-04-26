@@ -1,0 +1,87 @@
+html {
+    font-size: 14px;
+    font-family: sans-serif;
+    line-height: 1.4;
+}
+
+h1 {
+    color: red;
+    text-align: center;
+    font-size: 18px;
+}
+
+h2 {
+    font-size: 16px;
+}
+
+.info .logo {
+    text-align: center;
+}
+
+.info .intro {
+    text-align: right;
+}
+
+.info .intro span {
+    color: green;
+    font-weight: bold;
+}
+
+.info .header-border {
+    height: 2px;
+    background: red;
+}
+
+.info .association {
+    color: blue;
+}
+
+.institutes table {
+    background: #619FCCFF;
+}
+
+.institutes table {
+    border-collapse: collapse;
+    border: solid 1px black;
+}
+
+.institutes table td {
+    border: solid 1px black;
+    padding: 0 5px;
+}
+
+.institutes table td:nth-child(2) {
+    background: yellow;
+    width: 20%;
+}
+
+.branches {
+    line-height: 1.4;
+}
+
+.branches h2 {
+    color: green;
+}
+
+.branches ul {
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+}
+
+.branches li:nth-child(1) a {
+    color: green;
+}
+.branches li:nth-child(2) a {
+    color: red;
+}
+
+.branches li:nth-child(3) a {
+    color: blue;
+}
+
+.branches li:nth-child(4) a {
+    color: purple;
+}
+
+
