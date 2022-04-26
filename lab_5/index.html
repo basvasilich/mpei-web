@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab 5</title>
+</head>
+<body>
+<h1>Часть 1</h1>
+<form>
+    <fieldset>
+        <legend>Пользователь</legend>
+        <label for="user">Имя</label><br/>
+        <input type="text" id="user" name="user" readonly value="Иванов Иван"/><br/>
+        <label for="password">Пароль</label><br/>
+        <input type="password" id="password" name="password" value="123" maxlength="20"/><br/>
+    </fieldset>
+    <fieldset>
+        <legend>Сообщение</legend>
+        <label for="topic">Тема</label><br/>
+        <select id="topic" name="topic">
+            <option value="" disabled selected>Выберите тему</option>
+            <option value="1">Тема 1</option>
+            <option value="2">Тема 2</option>
+            <option value="3">Тема 2</option>
+        </select><br/>
+        <label for="title">Заголовок</label><br/>
+        <input type="text" id="title" name="title"/><br/>
+        <label for="message">Текст сообщения</label><br/>
+        <textarea wrap="soft" rows="5" cols="30" id="message" name="message"></textarea>
+    </fieldset>
+    <fieldset>
+        <legend>Отправка</legend>
+        <label for="policy"><input id="policy" type="checkbox" required/> Я принимаю условия пользовательского
+            солгашения</label><br/>
+        <input type="submit" value="Отправить"/>
+        <input type="reset" value="Очистить"/>
+    </fieldset>
+</form>
+<h1>Часть 2</h1>
+<form oninput="volume_result.value=parseInt(volume.value); price_result.value=parseInt(volume.value) * parseInt(price.value)">
+
+    <fieldset>
+        <legend>Карточка товара</legend>
+        <label for="section">Раздел</label><br/>
+        <input placeholder="Выберите..." type="search" list="section-list" id="section" name="section"/>
+
+        <datalist id="section-list">
+            <option value="Недвижимость">
+            <option value="Автомобили">
+            <option value="Электроника">
+            <option value="Компьютеры">
+        </datalist>
+        <br/>
+        <label for="url">Ссылка</label><br/>
+        <input type="url" id="url" name="url" placeholder="https://"/><br/>
+        <label for="color">Цвет товара</label><br/>
+        <input type="color" id="color" name="color"/><br/>
+        <label for="price">Цена за одну штуку (руб.)</label><br/>
+        <input value="100" type="number" id="price" name="price"/><br/>
+        <label for="volume">Количество товара</label><br/>
+        <input type="range" value="1" min="1" max="100" id="volume" name="volume"/>
+        <output name="volume_result" for="volume">1</output>
+        шт. на
+        <output name="price_result" for="volume">100</output>
+        руб.
+    </fieldset>
+    <fieldset>
+        <legend>Контакты</legend>
+        <label for="email">Почта</label><br/>
+        <input type="email" id="email" name="email" placeholder="ivan@mail.ru" /><br/>
+        <label for="phone">Телефон</label><br/>
+        +7 <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="9271234455" /><br/>
+    </fieldset>
+    <fieldset>
+        <legend>Отправка</legend>
+        <label for="policy2"><input id="policy2" type="checkbox" required /> Я принимаю условия пользовательского
+            солгашения</label><br/>
+        <input type="submit" value="Отправить"/>
+    </fieldset>
+
+</form>
+</body>
+</html>
