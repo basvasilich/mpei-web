@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab 6</title>
+    <script type="text/javascript" src="script.js"></script>
+    <script type="application/javascript">
+      document.write('Скрипт подключен через тэг script в head<br/>')
+    </script>
+</head>
+<body>
+<h1>Часть 1</h1>
+<div>
+    <a href="#" onclick="alert('Диалоговое окно через a')">Показать диалоговое окно через сслылку</a>
+</div>
+<div>
+    <input type="button" onclick="alert('Диалоговое окно на кнопке')" value="Показать диалоговое окно через кнопку">
+</div>
+<h1>Часть 2</h1>
+<h2>Сортировки</h2>
+<div>
+    <input type="button" value="Исходная" onclick="showSortedArray(myArray)">
+    <input type="button" value="По алфавиту" onclick="showSortedArray(myArray, 'abc')">
+    <input type="button" value="В обратном порядке " onclick="showSortedArray(myArray, 'rev')">
+    <input type="button" value="По длине" onclick="showSortedArray(myArray, 'len')">
+</div>
+<script type="application/javascript">
+  document.write('Скрипт подключен через тэг script в body<br/>')
+  let myArray = ['Москва', 'Волгоград', 'Ярославль', 'Серпухов', 'Подольск'];
+
+  /**
+   * Returns copy of the initial array by type of sorting
+   * @param {string[]} initialArr - initial array
+   * @param {string} type - type of sorting
+   * @returns {string[]}
+   */
+  const getNewArray = (initialArr, type) => {
+    let result = initialArr.slice() // avoiding initial array mutation by copying it
+    switch (type) {
+      case 'init':
+        break;
+      case 'abc':
+        result.sort()
+        break;
+      case 'rev':
+        result.reverse()
+        break;
+      case 'len':
+        result.sort((a, b) => a.length - b.length)
+        break;
+    }
+
+    return result;
+  }
+
+  /**
+   * Shows result of array sorting by type
+   * @param {string[]} arr - array to sort
+   * @param {string} [type=init] type - type of sorting
+   */
+  const showSortedArray = (arr, type = 'init') => {
+    alert(getNewArray(myArray, type).toString().replace(/,/g, '\n')) // some string manipulations for better output
+  }
+</script>
+</body>
+</html>
