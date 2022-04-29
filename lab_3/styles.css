@@ -72,6 +72,7 @@ h2 {
 .branches li:nth-child(1) a {
     color: green;
 }
+
 .branches li:nth-child(2) a {
     color: red;
 }
