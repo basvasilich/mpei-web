@@ -5,12 +5,21 @@
     <title>Lab 7</title>
 </head>
 <body>
-<form onsubmit="">
+<h1>Вариант 14</h1>
+<p>Вычислить объем параллелепипеда</p>
+<form id="form">
+    <fieldset>
+        <legend>Объем Параллелепипеда</legend>
+        V = <input pattern="[0-9]{8}" placeholder="A" type="number" name="a" id="a"/> X
+        <input  pattern="[0-9]{8}" placeholder="B" type="number" name="b" id="b"/> X
+        <input pattern="[0-9]{8}" placeholder="C" type="number" name="c" id="c"/> =
+        <output id="result"></output>
+        <br/><br/>
+        <input value="Рассчитать" type="submit"/>
+    </fieldset>
 
 </form>
 
 <script type="text/javascript" src="script.js"></script>
-
-
 </body>
 </html>

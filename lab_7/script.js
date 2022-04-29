@@ -22,3 +22,11 @@ for (let j = 1; j <= 10; j++) {
     alert(j);
   }
 }
+
+document.querySelector('#form').addEventListener('submit', (e) => {
+  e.preventDefault();
+  const a = parseInt(document.querySelector('#a').value)
+  const b = parseInt(document.querySelector('#b').value)
+  const c = parseInt(document.querySelector('#c').value)
+  document.querySelector('#result').value = a * b * c;
+})
