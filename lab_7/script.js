@@ -15,7 +15,7 @@ while (i <= 10) {
   sum += i;
   i += 1;
 }
-alert(sum);
+alert('Сумма чисел от 1 до 10 = ' + sum);
 
 for (let j = 1; j <= 10; j++) {
   if (j !== 7) {
