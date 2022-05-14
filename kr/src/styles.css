@@ -1,0 +1,15 @@
+#result #result_list {
+    display: none;
+}
+#result.not_empty #empty {
+    display: none;
+}
+
+#result.not_empty #result_list {
+    display: block;
+}
+
+#result .info.has_lift .no_lift,
+#result .info:not(.has_lift) .lift {
+    display: none;
+}

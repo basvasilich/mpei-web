@@ -1,10 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+  <meta charset="UTF-8">
+  <title>Результаты поиска</title>
+  <link type="text/css" href="./src/styles.css" rel="stylesheet"/>
 </head>
 <body>
-
+<section id="result">
+  <div id="empty">
+    <h1>Нет подходящих результатов</h1>
+  </div>
+  <ul id="result_list"></ul>
+  <template id="result_item">
+    <li class="result_item">
+      <div class="photo_box"><img alt="фото квартиры" class="photo"/></div>
+      <div class="title"></div>
+      <div class="address"></div>
+      <div class="info"><span class="room"></span>-комн. квартира, <span class="area"></span> м<sup>2</sup>, потолки
+        <span class="height"></span> м., <span class="floor"></span> этаж, <span class="lift">с лифтом</span><span
+            class="no_lift">без лифта</span></div>
+      <div class="price_box"><span class="price"></span> ₽/мес.</div>
+      <div class="text"></div>
+    </li>
+  </template>
+</section>
+<script type="module" src="./src/js/index.js"></script>
 </body>
 </html>

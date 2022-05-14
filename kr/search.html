@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>Search</title>
+  <title>Поиск квартиры</title>
+  <link type="text/css" href="./src/styles.css" rel="stylesheet"/>
 </head>
 <body>
-<form>
-  <fieldset>
+<form action="./result.html">
+  <fieldset >
     <legend>Количество комнат</legend>
     <label for="room_1"><input id="room_1" name="room" type="checkbox" value="1"/>1</label>
     <label for="room_2"><input id="room_2" name="room" type="checkbox" value="2"/>2</label>
@@ -36,29 +37,30 @@
   </fieldset>
   <fieldset>
     <legend>Лифт</legend>
-    <label for="lift_0"><input id="lift_0" checked name="lift" type="radio"
+    <label for="lift_0"><input id="lift_0" checked name="has_lift" type="radio"
                                value="0"/>Неважно</label>
-    <label for="lift_1"><input id="lift_1" name="lift" type="radio" value="1"/>
+    <label for="lift_1"><input id="lift_1" name="has_lift" type="radio" value="1"/>
       Есть</label>
   </fieldset>
   <fieldset>
     <legend>Высота потолков</legend>
     <label for="height_0"><input id="height_0" name="height" type="radio" checked value="0"/>Неважно</label>
-    <label for="height_1"><input id="height_1" name="height" type="radio" value="1"/> > 2.5м</label>
-    <label for="height_2"><input id="height_2" name="height" type="radio" value="2"/> > 3м</label>
-    <label for="height_3"><input id="height_3" name="height" type="radio" value="3"/> > 4м</label>
+    <label for="height_1"><input id="height_1" name="height" type="radio" value="2.5"/> >= 2.5м</label>
+    <label for="height_2"><input id="height_2" name="height" type="radio" value="3"/> >= 3м</label>
+    <label for="height_3"><input id="height_3" name="height" type="radio" value="4"/> >= 4м</label>
   </fieldset>
   <fieldset>
     <legend>Срок аренды</legend>
-    <label for="period_long"><input id="period_long" required checked name="period" type="radio"
+    <label for="period_long"><input id="period_long" required checked name="is_short" type="radio"
                                     value="long"/>Долгосрочный</label>
-    <label for="period_short"><input id="period_short" name="period" type="radio" value="short"/>
+    <label for="period_short"><input id="period_short" name="is_short" type="radio" value="short"/>
       Краткосрочный</label>
   </fieldset>
   <fieldset>
     <label for="text">Содержит слова в объявлении</label>
     <input type="text" name="text" id="text"/>
   </fieldset>
+  <fieldset><input type="submit" value="Подобрать"/></fieldset>
 </form>
 </body>
 </html>
