@@ -1,43 +1,30 @@
-const checkPrice = ({ price }, { price_from, price_to }) => {
-  if (!price_from && !price_to) {
+const checkFromToValue = (val, a, b) => {
+  const from = Math.min(a, b);
+  const to = Math.max(a, b);
+
+  if (!from && !to) {
     return true;
-  } else if (price_from && price_from) {
-    return price >= price_from && price <= price_to;
-  } else if (price_from && price >= price_from) {
+  } else if (from && from) {
+    return val >= from && val <= to;
+  } else if (from && area >= from) {
     return true;
-  } else if (price_to && price <= price_to) {
+  } else if (to && val <= to) {
     return true;
   } else {
     return false;
   }
+};
+
+const checkPrice = ({ price }, { price_from, price_to }) => {
+  return checkFromToValue(price, price_from, price_to);
 };
 
 const checkFloor = ({ floor }, { floor_from, floor_to }) => {
-  if (!floor_from && !floor_to) {
-    return true;
-  } else if (floor_from && floor_from) {
-    return floor >= floor_from && floor <= floor_to;
-  } else if (floor_from && floor >= floor_from) {
-    return true;
-  } else if (floor_to && floor <= floor_to) {
-    return true;
-  } else {
-    return false;
-  }
+  return checkFromToValue(floor, floor_from, floor_to);
 };
 
 const checkArea = ({ area }, { area_from, area_to }) => {
-  if (!area_from && !area_to) {
-    return true;
-  } else if (area_from && area_from) {
-    return area >= area_from && area <= area_to;
-  } else if (area_from && area >= area_from) {
-    return true;
-  } else if (area_to && area <= area_to) {
-    return true;
-  } else {
-    return false;
-  }
+  return checkFromToValue(area, area_from, area_to);
 };
 
 const checkHasLift = (apartments, input) => {

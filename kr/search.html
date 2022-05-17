@@ -6,8 +6,8 @@
   <link type="text/css" href="./src/styles.css" rel="stylesheet"/>
 </head>
 <body>
-<form action="./result.html">
-  <fieldset >
+<form id="search" action="./result.html">
+  <fieldset>
     <legend>Количество комнат</legend>
     <label for="room_1"><input id="room_1" name="room" type="checkbox" value="1"/>1</label>
     <label for="room_2"><input id="room_2" name="room" type="checkbox" value="2"/>2</label>
@@ -16,35 +16,35 @@
   </fieldset>
   <fieldset>
     <legend>Цена ₽/мес.</legend>
-    <label for="price_from">От</label>
-    <input type="number" maxlength="6" id="price_from" name="price_from"/>
+    <label for="price_from">от</label>
+    <input type="number" maxlength="6" id="price_from" min="0" max="50000" name="price_from"/>
     <label for="price_to">до</label>
-    <input type="number" maxlength="6" id="price_to" name="price_to"/>
+    <input type="number" maxlength="6" min="0" max="50000" id="price_to" name="price_to"/>
   </fieldset>
   <fieldset>
     <legend>Площадь м<sup>2</sup></legend>
-    <label for="area_from">От</label>
-    <input type="number" maxlength="4" id="area_from" name="area_from"/>
+    <label for="area_from">от</label>
+    <input type="number" maxlength="4" id="area_from" min="12" max="1000" name="area_from"/>
     <label for="area_to">до</label>
-    <input type="number" maxlength="4" id="area_to" name="area_to"/>
+    <input type="number" maxlength="4" id="area_to" min="12" max="1000" name="area_to"/>
   </fieldset>
   <fieldset>
     <legend>Этаж</legend>
-    <label for="floor_from">От</label>
-    <input type="number" maxlength="2" id="floor_from" name="floor_from"/>
+    <label for="floor_from">от</label>
+    <input type="number" maxlength="2"  min="1" max="50" id="floor_from" name="floor_from"/>
     <label for="floor_to">до</label>
-    <input type="number" maxlength="2" id="floor_to" name="floor_to"/>
+    <input type="number" maxlength="2" min="1" max="50" id="floor_to" name="floor_to"/>
   </fieldset>
   <fieldset>
     <legend>Лифт</legend>
     <label for="lift_0"><input id="lift_0" checked name="has_lift" type="radio"
-                               value="0"/>Неважно</label>
+                               value="0"/>неважно</label>
     <label for="lift_1"><input id="lift_1" name="has_lift" type="radio" value="1"/>
-      Есть</label>
+      есть</label>
   </fieldset>
   <fieldset>
     <legend>Высота потолков</legend>
-    <label for="height_0"><input id="height_0" name="height" type="radio" checked value="0"/>Неважно</label>
+    <label for="height_0"><input id="height_0" name="height" type="radio" checked value="0"/>неважно</label>
     <label for="height_1"><input id="height_1" name="height" type="radio" value="2.5"/> >= 2.5м</label>
     <label for="height_2"><input id="height_2" name="height" type="radio" value="3"/> >= 3м</label>
     <label for="height_3"><input id="height_3" name="height" type="radio" value="4"/> >= 4м</label>
@@ -52,9 +52,9 @@
   <fieldset>
     <legend>Срок аренды</legend>
     <label for="period_long"><input id="period_long" required checked name="is_short" type="radio"
-                                    value="long"/>Долгосрочный</label>
+                                    value="long"/>долгосрочный</label>
     <label for="period_short"><input id="period_short" name="is_short" type="radio" value="short"/>
-      Краткосрочный</label>
+      краткосрочный</label>
   </fieldset>
   <fieldset>
     <label for="text">Содержит слова в объявлении</label>
