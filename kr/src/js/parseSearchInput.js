@@ -2,7 +2,9 @@ export default function parseSearchInput() {
   if (window.location.search === "") {
     return {};
   }
-  const search = window.location.search.replace("?", "").split("&");
+  const search = decodeURI(window.location.search)
+    .replace("?", "")
+    .split("&");
 
   return search.reduce((acc, item) => {
     const [key, value] = item.split("=");
@@ -26,14 +28,18 @@ export default function parseSearchInput() {
         }
         break;
       case "text":
-        acc[key] = value.split(" ");
+        if (value.trim() !== "") {
+          acc[key] = value.trim().split("+");
+        }
+
         break;
       case "height":
         acc[key] = parseFloat(value);
         break;
-      case "":
-        acc[key] = parseInt(value);
-        break;
+      default:
+        if (value !== "") {
+          acc[key] = parseInt(value);
+        }
     }
 
     return acc;

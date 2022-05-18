@@ -6,6 +6,9 @@ export default function makeCard(data, keys) {
     const box = clone.querySelector("." + key);
     if (key === "photo") {
       box.src = data[key];
+    } else if (key === "phone") {
+      box.href = "tel:" + data[key];
+      box.textContent = data[key];
     } else {
       box.textContent = data[key];
     }

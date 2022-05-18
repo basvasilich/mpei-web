@@ -1,6 +1,10 @@
 import makeCard from "./makeCard.js";
 
-export default function renderMap(results, dataKeys, rootSelector = "#map") {
+export default function renderMap(
+  results,
+  dataKeys,
+  rootSelector = "#result_map"
+) {
   if (results.order.length === 0) {
     return;
   }
@@ -8,7 +12,7 @@ export default function renderMap(results, dataKeys, rootSelector = "#map") {
   ymaps.ready(() => {
     const myMap = new ymaps.Map(rootSelector.replace("#", ""), {
       center: [55.76, 37.64],
-      zoom: 10
+      zoom: 12
     });
     results.order.forEach(id => {
       const div = document.createElement("div");

@@ -19,6 +19,4 @@ export default function renderList(
     li.appendChild(makeCard(results.items[id], dataKeys));
     list.append(li);
   });
-
-  root.classList.add("not_empty");
 }

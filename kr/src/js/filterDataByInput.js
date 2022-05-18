@@ -1,12 +1,14 @@
 const checkFromToValue = (val, a, b) => {
-  const from = Math.min(a, b);
-  const to = Math.max(a, b);
-
-  if (!from && !to) {
+  if (!a && !b) {
     return true;
-  } else if (from && from) {
+  }
+
+  const from = Math.min(a || 0, b || 0);
+  const to = Math.max(a || 0, b || 0);
+
+  if (from && to) {
     return val >= from && val <= to;
-  } else if (from && area >= from) {
+  } else if (from && val >= from) {
     return true;
   } else if (to && val <= to) {
     return true;
@@ -51,11 +53,21 @@ const checkHeight = (apartments, input) => {
   }
   return apartments.height >= input.height;
 };
+
 const checkRoom = (apartments, input) => {
   if (!input.room) {
     return true;
   }
+
   return (input.room || []).includes(apartments.room);
+};
+
+const checkText = (apartments, input) => {
+  if (!input.text) {
+    return true;
+  }
+
+  return input.text.some(word => apartments.text.includes(word));
 };
 
 export default function filterDataByInput(apartments, input) {
@@ -68,7 +80,8 @@ export default function filterDataByInput(apartments, input) {
       checkHasLift(apartments[key], input) &&
       checkHeight(apartments[key], input) &&
       checkIsShort(apartments[key], input) &&
-      checkRoom(apartments[key], input)
+      checkRoom(apartments[key], input) &&
+      checkText(apartments[key], input)
     ) {
       result.items[key] = apartments[key];
       result.order.push(key);
