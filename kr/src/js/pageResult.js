@@ -38,7 +38,6 @@ if (resultApartments.order.length > 0) {
       } else {
         bodyNode.classList.replace("view_map", 'view_list');
       }
-
     }
   })
 }

@@ -16,6 +16,7 @@ export default function renderList(
   results.order.forEach(id => {
     const li = document.createElement("li");
     li.classList.add("result_list_item");
+    li.classList.add("result_item");
     li.appendChild(makeCard(results.items[id], dataKeys));
     list.append(li);
   });

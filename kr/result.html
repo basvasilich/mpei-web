@@ -2,41 +2,48 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>Результаты поиска</title>
+  <title>Результаты подбора</title>
   <link type="text/css" href="./src/styles.css" rel="stylesheet"/>
   <script src="https://api-maps.yandex.ru/2.1/?lang=en_RU&amp;apikey=cf91e861-6b6c-4249-b9af-4da22b1fdeea" type="text/javascript"></script>
 </head>
-<body>
-<section id="input">
-  <ul id="input_list"></ul>
-</section>
-<section id="empty">
-  <h1>Нет подходящих результатов</h1>
-</section>
-<section id="result">
-  <form id="view">
-    <fieldset>
-      <legend>Просмотр</legend>
-      <label for="view_map"><input  type="radio" checked name="view" value="map" id="view_map" />на карте</label>
-      <label for="view_list"><input  type="radio" name="view" value="list" id="view_list" />списком</label>
-    </fieldset>
-  </form>
-  <div id="result_map"></div>
-  <ul id="result_list"></ul>
-  <template id="result_item">
-    <div class="result_inner">
-      <div class="photo_box"><img alt="фото квартиры" class="photo" src="" /></div>
-      <div class="title"></div>
-      <div class="address"></div>
-      <div class="info"><span class="room"></span>-комн. квартира, <span class="area"></span> м<sup>2</sup>, потолки
-        <span class="height"></span> м., <span class="floor"></span> этаж, <span class="lift">с лифтом</span><span
-            class="no_lift">без лифта</span></div>
-      <div class="price_box"><span class="price"></span> ₽/мес.</div>
-      <div class="text"></div>
-      <a class="phone" href=""></a>
-    </div>
-  </template>
-</section>
+<body class="content">
+<h1>Результаты подбора <a href='./search.html'>новый подбор</a></h1>
+<div class="layout">
+  <section id="input">
+    <h2>Параметры</h2>
+    <ul id="input_list"></ul>
+    <form id="view">
+      <fieldset>
+        <legend>Показать</legend>
+        <label for="view_map"><input  type="radio" checked name="view" value="map" id="view_map" />на карте</label>
+        <label for="view_list"><input  type="radio" name="view" value="list" id="view_list" />списком</label>
+      </fieldset>
+    </form>
+  </section>
+  <section id="empty">
+    <h1>Нет подходящих результатов</h1>
+  </section>
+  <section id="result">
+
+    <div id="result_map"></div>
+    <ul id="result_list"></ul>
+    <template id="result_item">
+      <div class="result_inner">
+        <div class="photo_box"><img alt="фото квартиры" class="photo" src="" /></div>
+        <div class="title"></div>
+        <div class="address"></div>
+        <div class="info"><span class="room"></span>-комн. квартира, <span class="area"></span> м<sup>2</sup>, потолки
+          <span class="height"></span> м., <span class="floor"></span> этаж, <span class="lift">с лифтом</span><span
+              class="no_lift">без лифта</span></div>
+
+        <div class="text"></div>
+        <div class="bottom">
+        <div class="price_box"><span class="price"></span> ₽/мес.</div> <a class="phone" href=""></a></div>
+      </div>
+    </template>
+  </section>
+</div>
+
 <script type="module" src="src/js/pageResult.js"></script>
 </body>
 </html>
