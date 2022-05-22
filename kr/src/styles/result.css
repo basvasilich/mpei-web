@@ -1,0 +1,162 @@
+
+.layout {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.layout #input {
+    z-index: 1000;
+    position: absolute;
+    top: 0;
+    left: 750px;
+    width: 400px;
+    background: rgb(255,255,255);
+    padding: 1rem;
+}
+
+
+.view_map #empty,
+.view_map #empty,
+.view_list #empty {
+    display: none;
+}
+
+.view_map #view,
+.view_map #result_map {
+    display: block;
+}
+
+.view_list #view,
+.view_list #result_list {
+    display: block;
+}
+
+#result .info.has_lift .no_lift,
+#result .info:not(.has_lift) .lift {
+    display: none;
+}
+
+#result {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+}
+#result_map {
+    flex: 1 1 auto;
+    width: 100%;
+}
+
+
+.view_map label[for=view_map],
+.view_list label[for=view_list] {
+    padding: 0.2rem 0;
+    border-bottom: 5px solid rgb(48, 132, 179);
+}
+
+.result_item .result_inner {
+    position: relative;
+    padding-left: 120px;
+}
+
+.result_item .photo_box {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+}
+
+.result_map_item .result_inner {
+    padding-left: 120px;
+}
+
+.result_map_item .photo_box {
+    width: 100px;
+    height: 100px;
+}
+
+#result_list {
+    padding-left: 0;
+    width: 700px
+}
+
+.result_list_item {
+    padding-left: 0;
+    list-style: none;
+    margin-bottom: 2rem;
+}
+
+.result_list_item .result_inner {
+    padding-left: 220px;
+}
+
+.result_list_item .photo_box {
+    width: 200px;
+    height: 200px;
+}
+
+.result_map_item .result_inner {
+    font-size: 0.8rem;
+}
+
+.result_item .photo_box img {
+    width: 100%;
+}
+
+.result_map_item .text {
+    display: none;
+}
+
+.result_item .title {
+    font-weight: bold;
+}
+
+.result_item .address {
+    color: rgb(125,125,125);
+}
+
+.result_item .bottom {
+    display: flex;
+    margin-top: 0.5rem;
+}
+
+.result_item .bottom .price,
+.result_item .bottom .phone {
+    flex: 1 1 50%;
+    font-weight: bold;
+    padding: 0.2rem 0;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.result_item .bottom .phone {
+    text-align: center;
+    background: rgb(48, 132, 179);
+    margin-left: 1rem;
+    color: rgb(255,255,255);
+    padding: 0.2rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+.result_list_item .bottom .price,
+.result_list_item .bottom .phone {
+    flex: 1 1 auto;
+}
+
+.result_list_item .bottom .phone {
+    flex: 0 1 auto;
+    padding: 0.2rem 1rem;
+}
+.result_list_item .title,
+.result_list_item .info,
+.result_list_item .text,
+.result_list_item .address {
+    margin-bottom: 0.5rem;
+
+}

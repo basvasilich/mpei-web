@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Подобор квартиры</title>
-  <link type="text/css" href="./src/styles.css" rel="stylesheet"/>
+  <link type="text/css" href="./src/styles/index.css" rel="stylesheet"/>
 </head>
 <body>
 <div class="header">
@@ -25,23 +25,23 @@
   <fieldset class="from_to">
     <legend>Цена ₽/мес.</legend>
     <label for="price_from">от
-    <input type="number" maxlength="6" id="price_from" min="0" max="500000" name="price_from"/></label>
+      <input type="number" maxlength="6" id="price_from" min="0" max="500000" name="price_from"/></label>
     <label for="price_to">до
-    <input type="number" maxlength="6" min="0" max="500000" id="price_to" name="price_to"/></label>
+      <input type="number" maxlength="6" min="0" max="500000" id="price_to" name="price_to"/></label>
   </fieldset>
-  <fieldset  class="from_to">
+  <fieldset class="from_to">
     <legend>Площадь м<sup>2</sup></legend>
     <label for="area_from">от
-    <input type="number" maxlength="4" id="area_from" min="12" max="1000" name="area_from"/></label>
+      <input type="number" maxlength="4" id="area_from" min="12" max="1000" name="area_from"/></label>
     <label for="area_to">до
-    <input type="number" maxlength="4" id="area_to" min="12" max="1000" name="area_to"/></label>
+      <input type="number" maxlength="4" id="area_to" min="12" max="1000" name="area_to"/></label>
   </fieldset>
-  <fieldset  class="from_to">
+  <fieldset class="from_to">
     <legend>Этаж</legend>
     <label for="floor_from">от
-    <input type="number" maxlength="2"  min="1" max="50" id="floor_from" name="floor_from"/></label>
+      <input type="number" maxlength="2" min="1" max="50" id="floor_from" name="floor_from"/></label>
     <label for="floor_to">до
-    <input type="number" maxlength="2" min="1" max="50" id="floor_to" name="floor_to"/></label>
+      <input type="number" maxlength="2" min="1" max="50" id="floor_to" name="floor_to"/></label>
   </fieldset>
   <fieldset>
     <legend>Лифт</legend>
@@ -66,7 +66,7 @@
   </fieldset>
   <fieldset>
     <label for="text">Содержит слова в объявлении
-    <input type="text" name="text" id="text"/></label>
+      <input type="text" name="text" id="text"/></label>
   </fieldset>
   <fieldset><input type="submit" value="Подобрать"/></fieldset>
 </form>
