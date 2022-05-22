@@ -38,10 +38,10 @@ body #result_map {
     z-index: 1000;
     position: absolute;
     top: 0;
-    right: 0;
+    left: 750px;
+    width: 400px;
     background: rgb(255,255,255);
-    padding: 0.5rem;
-    width: 40%;
+    padding: 1rem;
 }
 
 
@@ -181,7 +181,7 @@ body #result_map {
 
 #result_list {
     padding-left: 0;
-    padding-right: 45%;
+    width: 700px
 }
 
 .result_list_item {
@@ -261,4 +261,74 @@ body #result_map {
 
 }
 
+.main h1{
+    font-size: 10rem;
+    font-weight: bold;
+    color: rgb(0,0,0);
+    line-height: 9rem;
+    font-family: "Tahoma", sans-serif;
+    letter-spacing: -5px;
+    text-transform: uppercase;
+    opacity: 0.8;
+    background: repeating-linear-gradient( 45deg, rgb(48, 132, 179), rgb(48, 132, 179) 10px, #e5e5f7 10px, #e5e5f7 25px );
+    padding: 1rem;
+    margin: 0
+}
 
+.main ul {
+    padding: 0
+}
+.main li {
+    list-style: none;
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 2rem;
+    margin-left: 1.4rem;
+}
+
+.main li a {
+    color: rgb(0,0,0);
+    text-decoration: none;
+    display: inline-block;
+}
+
+.main li a:hover{
+    color: rgb(0,0,0);
+    border-bottom: 5px solid rgb(48, 132, 179);
+}
+
+.header {
+    display: flex;
+}
+
+.header h1 {
+    flex: 1 0 auto
+}
+
+.header .menu {
+    margin-top: 2rem;
+    flex: 0 0 auto
+}
+
+.header .menu li {
+    list-style: none;
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    margin-left: 1.4rem;
+}
+
+.header .menu li a{
+    text-decoration: none;
+    color: rgb(0,0,0);
+}
+
+.header .menu  li:hover,
+.header .menu  li.active {
+    color: rgb(0,0,0);
+    border-bottom: 5px solid rgb(48, 132, 179);
+}
+
+.about p {
+    max-width: 700px;
+}
