@@ -1,3 +1,9 @@
+/**
+ * Функуция рендера одной карточки квартиры из темплейта
+ * @param data объект квартиры
+ * @param keys поддержанные ключи объекта квартиры
+ * @returns {Node}
+ */
 export default function makeCard(data, keys) {
   const template = document.querySelector("#result_item");
   const clone = template.content.cloneNode(true);

@@ -1,5 +1,7 @@
-import makeCard from "./makeCard.js";
-
+/**
+ * Функция рендера параметров поиска
+ * @param input объект параметров поиска
+ */
 export default function renderInput(input) {
   const list = document.querySelector("#input_list");
   const addItem = (className, dataString) => {

@@ -1,5 +1,11 @@
 import makeCard from "./makeCard.js";
 
+/**
+ * Функция рендера результатов поиска в виде карты
+ * @param results подходящее по параметрам подмножество имеющихся квартир
+ * @param dataKeys ключи которые поддержанны в карточка квартиры
+ * @param rootSelector селектор корня списка
+ */
 export default function renderMap(
   results,
   dataKeys,

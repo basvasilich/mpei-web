@@ -1,3 +1,10 @@
+/**
+ * Функция которая сравнивает значение формы типа "от" и "до"
+ * @param val {number}
+ * @param a {number}
+ * @param b {number}
+ * @returns {boolean}
+ */
 const checkFromToValue = (val, a, b) => {
   if (!a && !b) {
     return true;
@@ -17,61 +24,118 @@ const checkFromToValue = (val, a, b) => {
   }
 };
 
-const checkPrice = ({ price }, { price_from, price_to }) => {
+/**
+ * Функция проверки цены
+ * @param price {number}
+ * @param price_from {number}
+ * @param price_to {number}
+ * @returns {boolean}
+ */
+const checkPrice = ({price}, {price_from, price_to}) => {
   return checkFromToValue(price, price_from, price_to);
 };
 
-const checkFloor = ({ floor }, { floor_from, floor_to }) => {
+/**
+ * Функция проверки этажа
+ * @param floor {number}
+ * @param floor_from {number}
+ * @param floor_to {number}
+ * @returns {boolean}
+ */
+const checkFloor = ({floor}, {floor_from, floor_to}) => {
   return checkFromToValue(floor, floor_from, floor_to);
 };
 
-const checkArea = ({ area }, { area_from, area_to }) => {
+/**
+ * Функция проверки площади
+ * @param area {number}
+ * @param area_from {number}
+ * @param area_to {number}
+ * @returns {boolean}
+ */
+const checkArea = ({area}, {area_from, area_to}) => {
   return checkFromToValue(area, area_from, area_to);
 };
 
-const checkHasLift = (apartments, input) => {
+/**
+ * Функция проверки наличия лифта
+ * @param apartment объект квартиры
+ * @param input объект ввода
+ * @returns {boolean}
+ */
+const checkHasLift = (apartment, input) => {
   if (!input.has_lift) {
     return true;
-  } else if (input.has_lift && !apartments.has_lift) {
+  } else if (input.has_lift && !apartment.has_lift) {
     return false;
   }
   return true;
 };
 
-const checkIsShort = (apartments, input) => {
+/**
+ * Функция проверки срока аренды
+ * @param apartment объект квартиры
+ * @param input объект ввода
+ * @returns {boolean}
+ */
+const checkIsShort = (apartment, input) => {
   if (!input.is_short) {
     return true;
-  } else if (input.is_short && !apartments.is_short) {
+  } else if (input.is_short && !apartment.is_short) {
     return false;
   }
   return true;
 };
 
-const checkHeight = (apartments, input) => {
+/**
+ * Функция проверки высоты потолка
+ * @param apartment объект квартиры
+ * @param input объект ввода
+ * @returns {boolean}
+ */
+const checkHeight = (apartment, input) => {
   if (!input.height) {
     return true;
   }
-  return apartments.height >= input.height;
+  return apartment.height >= input.height;
 };
 
-const checkRoom = (apartments, input) => {
+/**
+ * Функция проверки количества комнат
+ * @param apartment объект квартиры
+ * @param input объект ввода
+ * @returns {boolean}
+ */
+const checkRoom = (apartment, input) => {
   if (!input.room) {
     return true;
   }
 
-  return (input.room || []).includes(apartments.room);
+  return (input.room || []).includes(apartment.room);
 };
 
-const checkText = (apartments, input) => {
+/**
+ * Функция проверки вхождения слов
+ * @param apartment объект квартиры
+ * @param input объект ввода
+ * @returns {boolean}
+ */
+const checkText = (apartment, input) => {
   if (!input.text) {
     return true;
   }
 
-  return input.text.some(word => apartments.text.includes(word));
+  return input.text.some(word => apartment.text.includes(word));
 };
 
+/**
+ * Функция фильтрации подходящих вариантов из всех имеющихся
+ * @param apartments массив имеющихся вариантов квартир
+ * @param input объект параметров поиска введенного пользователем
+ * @returns {{items: {}, order: *[]}}
+ */
 export default function filterDataByInput(apartments, input) {
-  let result = { items: {}, order: [] };
+  let result = {items: {}, order: []};
   for (let key in apartments) {
     if (
       checkPrice(apartments[key], input) &&

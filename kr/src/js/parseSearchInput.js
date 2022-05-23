@@ -1,3 +1,7 @@
+/**
+ * Функция обработки параметров query параметров в window.location
+ * @returns объект параметров поиска
+ */
 export default function parseSearchInput() {
   if (window.location.search === "") {
     return {};
