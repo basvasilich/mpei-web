@@ -13,7 +13,7 @@
     top: 0;
     left: 750px;
     width: 400px;
-    background: rgb(255,255,255);
+    background: rgb(255, 255, 255);
     padding: 1rem;
 }
 
@@ -44,6 +44,7 @@
     display: flex;
     flex-direction: column;
 }
+
 #result_map {
     flex: 1 1 auto;
     width: 100%;
@@ -153,6 +154,7 @@
     flex: 0 1 auto;
     padding: 0.2rem 1rem;
 }
+
 .result_list_item .title,
 .result_list_item .info,
 .result_list_item .text,
