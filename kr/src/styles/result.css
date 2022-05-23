@@ -53,7 +53,7 @@
 .view_map label[for=view_map],
 .view_list label[for=view_list] {
     padding: 0.2rem 0;
-    border-bottom: 5px solid rgb(48, 132, 179);
+    border-bottom: 5px solid var(--color-primary);
 }
 
 .result_item .result_inner {
@@ -116,7 +116,7 @@
 }
 
 .result_item .address {
-    color: rgb(125,125,125);
+    color: var(--color-secondary);
 }
 
 .result_item .bottom {
@@ -135,9 +135,9 @@
 
 .result_item .bottom .phone {
     text-align: center;
-    background: rgb(48, 132, 179);
+    background: var(--color-primary);
     margin-left: 1rem;
-    color: rgb(255,255,255);
+    color: var(--color-primary-bg);
     padding: 0.2rem;
     border-radius: 4px;
     text-decoration: none;

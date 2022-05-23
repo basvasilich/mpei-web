@@ -2,6 +2,7 @@
 @import url("main.css");
 @import url("result.css");
 @import url("input.css");
+@import url("var.css");
 
 html,
 body {
@@ -28,7 +29,7 @@ body #result_map {
     font-size: 0.8rem;
     font-weight: normal;
     margin-left: 1rem;
-    color: rgb(125,125,125);
+    color: var(--color-secondary);
 }
 
 .header {
@@ -54,13 +55,13 @@ body #result_map {
 
 .header .menu li a{
     text-decoration: none;
-    color: rgb(0,0,0);
+    color: var(--color-secondary-bg);
 }
 
 .header .menu  li:hover,
 .header .menu  li.active {
-    color: rgb(0,0,0);
-    border-bottom: 5px solid rgb(48, 132, 179);
+    color: var(--color-secondary-bg);
+    border-bottom: 5px solid var(--color-primary);
 }
 
 .about p {

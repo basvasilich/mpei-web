@@ -1,6 +1,6 @@
 #input h2 {
     font-size: 0.8rem;
-    color: rgb(125,125,125);
+    color: var(--color-secondary);
     font-weight: normal;
 }
 
@@ -11,7 +11,7 @@
 
 #input legend {
     font-size: 0.8rem;
-    color: rgb(125,125,125);
+    color: var(--color-secondary);
     margin-bottom: 0.5rem;
     padding: 0;
 }

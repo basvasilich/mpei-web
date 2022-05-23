@@ -1,13 +1,13 @@
 .main h1 {
     font-size: 10rem;
     font-weight: bold;
-    color: rgb(0, 0, 0);
+    color: var(--color-secondary-bg);
     line-height: 9rem;
     font-family: "Tahoma", sans-serif;
     letter-spacing: -5px;
     text-transform: uppercase;
     opacity: 0.8;
-    background: repeating-linear-gradient(45deg, rgb(48, 132, 179), rgb(48, 132, 179) 10px, #E5E5F7 10px, #E5E5F7 25px);
+    background: repeating-linear-gradient(45deg, var(--color-primary), var(--color-primary) 10px, #E5E5F7 10px, #E5E5F7 25px);
     padding: 1rem;
     margin: 0
 }
@@ -26,12 +26,12 @@
 }
 
 .main li a {
-    color: rgb(0, 0, 0);
+    color: var(--color-secondary-bg);
     text-decoration: none;
     display: inline-block;
 }
 
 .main li a:hover {
-    color: rgb(0, 0, 0);
-    border-bottom: 5px solid rgb(48, 132, 179);
+    color: var(--color-secondary-bg);
+    border-bottom: 5px solid var(--color-primary);
 }
