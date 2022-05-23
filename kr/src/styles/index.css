@@ -25,7 +25,7 @@ body #result_map {
     flex-direction: column;
 }
 
-.content h1 a{
+.content h1 a {
     font-size: 0.8rem;
     font-weight: normal;
     margin-left: 1rem;
@@ -53,13 +53,13 @@ body #result_map {
     margin-left: 1.4rem;
 }
 
-.header .menu li a{
+.header .menu li a {
     text-decoration: none;
     color: var(--color-secondary-bg);
 }
 
-.header .menu  li:hover,
-.header .menu  li.active {
+.header .menu li:hover,
+.header .menu li.active {
     color: var(--color-secondary-bg);
     border-bottom: 5px solid var(--color-primary);
 }
